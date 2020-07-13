@@ -1,13 +1,28 @@
-import React from 'react';
-import './styles.css';
+import React from "react";
+import "./styles.css";
+import Search from "../../atoms/Search";
 
-const SearchBar = (imageButton, placeholder) =>{
-    return (
-        <div className='search-bar--wrapper'>
-        <input classname='search-bar--input' placeholder={placeholder}></input>
-        <button className='search-bar--button'>{imageButton}</button>
-        </div>
-    )
+const SearchBar = ({
+  imageButton,
+  onClick,
+  value,
+  placeholder,
+  type,
+  changeUser,
+}) => {
+  return (
+    <div className="search-bar-box">
+      <Search
+        value={value}
+        placeholder={placeholder}
+        type={type}
+        changeUser={changeUser}
+      />
+      <button className="buttonIcon" onClick={onClick}>
+        <img alt="button icon" src={imageButton} />
+      </button>
+    </div>
+  );
 };
 
 export default SearchBar;

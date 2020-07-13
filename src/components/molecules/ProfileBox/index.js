@@ -1,11 +1,15 @@
 import React from "react";
 import "./styles.css";
 
-const profileBox = () => {
+const ProfileBox = (
+    userImg,
+    userName,
+    userSubtitle
+) => {
   return (
     <div>
       <div className="profile-box">
-        <img alt={alt} src={userImg}></img>
+        <img alt='user image' src={userImg}></img>
         <h3>{userName}</h3>
         <h4>{userSubtitle}</h4>
       </div>
@@ -13,4 +17,4 @@ const profileBox = () => {
   );
 };
 
-export default profileBox;
+export default ProfileBox;

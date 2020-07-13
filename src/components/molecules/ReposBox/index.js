@@ -1,14 +1,19 @@
 import React from "react";
 import "./styles.css";
 
-const reposBox = () => {
+const ReposBox = (
+    repoName,
+    repoDescription,
+    starIcon,
+    starNumber
+    ) => {
   return (
     <div>
       <div className="repos-box">
         <h3>{repoName}</h3>
         <p>{repoDescription}</p>
         <div className="icon-text-box">
-          <img src={starIcon}></img>
+          <img alt='star icon' src={starIcon}></img>
           <p>{starNumber}</p>
         </div>
       </div>
@@ -16,4 +21,4 @@ const reposBox = () => {
   );
 };
 
-export default reposBox;
+export default ReposBox;
