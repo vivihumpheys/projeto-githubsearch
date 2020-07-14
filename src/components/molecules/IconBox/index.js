@@ -1,13 +1,13 @@
 import React from "react";
 import "./styles.css";
 
-const IconBox = (
+const IconBox = ({
     icon,
     userLocation,
     userRepos,
     userFollowers,
     userFollowing
-) => {
+}) => {
   return (
     <div>
       <div className="icon-box">

@@ -4,7 +4,7 @@ import "./styles.css";
 const Search = ({ value, placeholder, type, changeUser }) => {
   return (
     <input
-      classname="input-search"
+      className="input-search"
       value={value}
       placeholder={placeholder}
       type={type}

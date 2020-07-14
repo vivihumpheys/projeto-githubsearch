@@ -1,11 +1,11 @@
 import React from "react";
 import "./styles.css";
 
-const ProfileBox = (
+const ProfileBox = ({
     userImg,
     userName,
     userSubtitle
-) => {
+}) => {
   return (
     <div>
       <div className="profile-box">

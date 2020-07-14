@@ -3,7 +3,7 @@ import './styles.css';
 
 const MainTitle = ({text}) =>{
     return (
-    <h1 classname= 'main-title'>{text}</h1>
+    <h1 className= 'main-title'>{text}</h1>
     )
  };
 

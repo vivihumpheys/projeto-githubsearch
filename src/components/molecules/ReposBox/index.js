@@ -1,12 +1,12 @@
 import React from "react";
 import "./styles.css";
 
-const ReposBox = (
+const ReposBox = ({
     repoName,
     repoDescription,
     starIcon,
     starNumber
-    ) => {
+}) => {
   return (
     <div>
       <div className="repos-box">
