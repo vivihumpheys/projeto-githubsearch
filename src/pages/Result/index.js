@@ -9,21 +9,23 @@ class Result extends Component {
   constructor(){
     super();
     this.state={
-    repo: "",
-    user: ""
-   
+    data:[],
+    user:{}
     }
   };
 
   componentDidMount = async() => {
-    const getRepos = await ApiService.get(``);
-    this.setState({repo: getRepos.data, user: getRepos.data})
-  }
+    const user = this.props.history.location.state.login;
+    // console.log(this.props.history);
+    const response = await ApiService.get(`/users/${user}/repos`);
+    this.setState({data: response.data, user:this.props.history.location.state})
+  };
 
 
   render(){
-    const{repo} = this.state
-    const{user} = this.state
+    const{data, user} = this.state;
+    console.log(data, user);
+
     return(
       <div>
       {/* <ProfileBox 

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./styles.css";
-import { Link } from "react-router-dom";
 import MainTitle from "../../components/atoms/Main Title";
 import SearchBar from "../../components/molecules/SearchBar";
 import iconButton from "../../assets/icons/search-icon.svg";
@@ -18,39 +17,45 @@ class Home extends Component {
 
   changeUser = (e) => {
     const inputValue = e.target.value;
-    this.setState({ inputValue});
-    // console.log ('estado usuario', user);
+    this.setState({ inputValue });
+    console.log("valor input", inputValue);
   };
 
   searchUser = async () => {
     const user = this.state.inputValue;
-    const getUser = await ApiService.get(`/users/${user}`);
-    if (getUser.data.login !== "") {
-      this.props.history.push({
-        pathname: "/result",
-        state: getUser.data,
-      });
+    if (user) {
+      try {
+        const response = await ApiService.get(`/users/${user}`);
+        console.log("pegar dados da api", response);
+        this.props.history.push({
+          pathname: "/result",
+          state: response.data,
+        });
+      } catch (e) {
+        this.setState({ error: "Usuário de GitHub não encontrado" });
+      }
     } else {
-      this.setState({ error: "Usuário de GitHub não encontrado" });
-    }
-    // console.log ('usuario do github', user);
-    console.log("pegar usuário da api", getUser);
+      this.setState({ error: "Por favor, digite um usuário" });
+    };
+
+    // console.log("mensagem de erro", this.state.error);
+    // console.log("usuario do github", user);
   };
 
   render() {
-    // console.log (this.props.history);
-    // console.log ('estado do input', this.state.inputValue);
+    const { inputValue, error } = this.state;
     return (
       <div>
         <MainTitle text="GitHub Search" />
         <SearchBar
           imageButton={iconButton}
           placeholder="Digite um usuário para consultar seus repositórios"
-          value={this.inputValue}
+          value={inputValue}
           onClick={this.searchUser}
           type="text"
           changeUser={this.changeUser}
         />
+        <p>{error}</p>
       </div>
     );
   }
