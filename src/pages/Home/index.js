@@ -32,7 +32,7 @@ class Home extends Component {
           state: response.data,
         });
       } catch (e) {
-        this.setState({ error: "Usuário de GitHub não encontrado" });
+        this.setState({ error: "Usuário de GitHub não encontrado", inputValue:''});
       }
     } else {
       this.setState({ error: "Por favor, digite um usuário" });
@@ -55,7 +55,8 @@ class Home extends Component {
           type="text"
           changeUser={this.changeUser}
         />
-        <p>{error}</p>
+        {/* if ternário resumido, se error é true, então rederize o texto de error. evita renderizar uma frase vazia */}
+        {error && <p>{error}</p>}
       </div>
     );
   }
