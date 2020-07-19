@@ -1,0 +1,19 @@
+.icon-text-box{
+    display: flex;
+    max-width: 300px;
+    
+  
+}
+
+.icon-box{
+    display: inline-block;
+    width: 200px;
+    border: greenyellow solid 3px;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.icon-text {
+    color: black;
+    font-style: italic;
+}

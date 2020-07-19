@@ -12,6 +12,7 @@ const SearchBar = ({
 }) => {
   return (
     <div className="search-bar-box">
+     
       <Search
         value={value}
         placeholder={placeholder}
@@ -19,7 +20,7 @@ const SearchBar = ({
         changeUser={changeUser}
       />
       <button className="buttonIcon" onClick={onClick}>
-        <img alt="button icon" src={imageButton} />
+        <img alt="search button" src={imageButton} />
       </button>
     </div>
   );

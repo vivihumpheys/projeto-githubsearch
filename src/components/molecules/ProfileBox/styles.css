@@ -1,0 +1,14 @@
+.profile-img {
+    width: 300px;
+    border-radius: 30px;
+}
+
+.profile-name {
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+.profile-subtitle {
+    font-weight: lighter;
+}

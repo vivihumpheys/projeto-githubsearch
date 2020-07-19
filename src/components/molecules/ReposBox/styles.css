@@ -1,0 +1,21 @@
+.repos-box {
+    padding: 10px;
+}
+
+.icon-text-box {
+    display: flex;
+
+}
+
+.repo-name {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+
+.repo-description {
+    font-style: italic;
+}
+
+.star-number {
+    font-style: italic;
+}

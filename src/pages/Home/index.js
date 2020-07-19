@@ -56,7 +56,7 @@ class Home extends Component {
           changeUser={this.changeUser}
         />
         {/* if ternário resumido, se error é true, então rederize o texto de error. evita renderizar uma frase vazia */}
-        {error && <p>{error}</p>}
+        {error && <p className='error-msg'>{error}</p>}
       </div>
     );
   }

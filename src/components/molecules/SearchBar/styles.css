@@ -1,0 +1,16 @@
+.buttonIcon{
+   opacity: 0.9;
+   border: gray solid 1px;
+}
+
+.buttonIcon:hover{
+border: gray solid 3px;
+}
+
+.search-bar-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+   }
+

@@ -9,9 +9,9 @@ const ProfileBox = ({
   return (
     <div>
       <div className="profile-box">
-        <img alt='user image' src={userImg}></img>
-        <h3>{userName}</h3>
-        <h4>{userSubtitle}</h4>
+        <img className='profile-img' alt='user' src={userImg}></img>
+        <h3 className='profile-name'>{userName}</h3>
+        <h4 className='profile-subtitle'>{userSubtitle}</h4>
       </div>
     </div>
   );
