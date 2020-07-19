@@ -1,9 +1,16 @@
-.icon-text-box{
+.icon-mini-box{
     display: flex;
-    max-width: 300px;
+    justify-content: space-between;
+   width: 50px;
     
-  
 }
+
+    .icon-location-box{
+        display: flex;
+        justify-content: space-between;
+        width: 154px
+    }
+
 
 .icon-box{
     display: inline-block;

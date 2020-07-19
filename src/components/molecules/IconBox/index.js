@@ -14,19 +14,19 @@ const IconBox = ({
   return (
     <div>
       <div className="icon-box">
-        <div className="icon-text-box">
+        <div className="icon-location-box">
           <img alt='icon' src={iconLocation}></img>
           <p className='icon-text'>{userLocation}</p>
         </div>
-        <div className="icon-text-box">
+        <div className="icon-mini-box">
           <img alt='icon' src={iconRepos}></img>
           <p className='icon-text'>{userRepos}</p>
         </div>
-        <div className="icon-text-box">
+        <div className="icon-mini-box">
           <img alt='icon' src={iconFollowers}></img>
           <p className='icon-text'>{userFollowers}</p>
         </div>
-        <div className="icon-text-box">
+        <div className="icon-mini-box">
           <img alt='icon' src={iconFollowing}></img>
           <p className='icon-text'>{userFollowing}</p>
         </div>

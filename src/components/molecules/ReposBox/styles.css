@@ -4,6 +4,8 @@
 
 .icon-text-box {
     display: flex;
+    justify-content: space-between;
+    width: 40px;
 
 }
 

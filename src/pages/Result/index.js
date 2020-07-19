@@ -34,7 +34,7 @@ class Result extends Component {
 
     return (
       <div className='result-content'>
-        <div>
+        <div className='profile-box'>
           <ProfileBox
             userImg={user.avatar_url}
             userName={user.name}
@@ -51,7 +51,7 @@ class Result extends Component {
             userFollowing={user.following}
           />
         </div>
-        <div>
+        <div className='repo-box'>
           {data.map((repo) => (
             <ReposBox
               repoName={repo.name}
